@@ -3,47 +3,38 @@ import java.util.*;
 class EnergyDevice {
     String name;
     int watts;
-
     EnergyDevice(String name, int watts) {
         this.name = name;
         this.watts = watts;
     }
-
     int energy(int hours) {
         return watts * hours;
     }
-
     String label() {
         return "Device";
     }
 }
-
 class EnergyLight extends EnergyDevice {
     EnergyLight(String name, int watts) {
         super(name, watts);
     }
-
     @Override
     int energy(int hours) {
         return watts * hours;
     }
-
     @Override
     String label() {
         return "Light";
     }
 }
-
 class EnergyCamera extends EnergyDevice {
     EnergyCamera(String name, int watts) {
         super(name, watts);
     }
-
     @Override
     int energy(int hours) {
         return watts * 24;
     }
-
     @Override
     String label() {
         return "Camera";
@@ -54,12 +45,10 @@ class Heater extends EnergyDevice {
     Heater(String name, int watts) {
         super(name, watts);
     }
-
     @Override
     int energy(int hours) {
         return watts * hours + 100;
     }
-
     @Override
     String label() {
         return "Heater";
