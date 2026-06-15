@@ -43,9 +43,11 @@ class SpiralMatrix {
     }
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of rows and columns:");
         int m = in.nextInt();
         int n = in.nextInt();
         int[][] matrix = new int[m][n];
+        System.out.println("Enter the elements of the matrix:");
         for(int i = 0; i < m; i++){
             for(int j = 0; j < n; j++){
                 matrix[i][j] = in.nextInt();
